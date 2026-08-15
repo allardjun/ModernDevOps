@@ -1,0 +1,17 @@
+{
+  // Workspace settings, shared with the published repository by scripts/publish.sh.
+  //
+  // These live here rather than in .devcontainer/devcontainer.json so that changing them only needs a `git pull`, not a container rebuild --- the same arrangement as the sibling P230A and MCSBBootcamp repos.
+  // The cost is that they also apply to a local VS Code window opened on this folder, not only to a Codespace.
+
+  // Turn off the AI chat surfaces.
+  // The panel crowds an already busy window, and in a course whose whole point is learning to supervise a valuable-but-unreliable team-mate, having one volunteer answers unasked is the opposite of the exercise.
+  "chat.commandCenter.enabled": false,
+  "chat.disableAIFeatures": true,
+  "github.copilot.enable": { "*": false },
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+  // Open the README, rendered, when the window opens with nothing else restored.
+  // Complements customizations.codespaces.openFiles in devcontainer.json, which fires only on a codespace's first open and only in the web client; this one applies every time.
+  "workbench.startupEditor": "readme"
+}

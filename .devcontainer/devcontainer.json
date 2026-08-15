@@ -1,0 +1,39 @@
+// The environment a student gets when they open the published repository in a GitHub Codespace.
+//
+// This file is copied into the published repository by scripts/publish.sh and is never built here.
+// Nothing local needs a container: authoring is quarto and a text editor.
+//
+// It is deliberately NOT the Python devcontainer the sibling MCSBBootcamp and P230A repos ship.
+// Those courses execute Python in their notebooks and need uv, JupyterLab and a registered kernel; this one executes nothing at build time, and what its students need is the thing the course is about --- a real Linux machine with git and a shell on it.
+// See CLAUDE.md, "Two repositories", for the reasoning and for what to add the day a notebook here first runs code.
+{
+  "name": "Modern DevOps for Systems Biologists",
+
+  // The general base image rather than a language-specific one: git, bash, zsh, curl and the ordinary userland, which is the whole substrate for units 1 to 3.
+  // A student who needs a language brings it; the course is deliberately language-agnostic about what they compute in.
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+
+  "features": {
+    // Only needed to *build* the site --- a student never invokes it.
+    // Here so that the Codespace is also a working authoring environment, since scripts/deploy.sh is otherwise the one thing about this repository that a Codespace could not do.
+    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
+  },
+
+  "customizations": {
+    // Opens the README the first time this codespace is opened in the web client.
+    //
+    // There is no URL parameter that opens a particular file in a codespace --- the codespace does not exist yet when the link is clicked --- so a student arriving from the website would otherwise land at a bare file tree and have to find their way to docs/.
+    // The README is written as an index of the activities, with relative links that open each one when clicked in the rendered preview, which turns that navigation into a single click.
+    "codespaces": {
+      "openFiles": ["README.md"]
+    },
+
+    "vscode": {
+      // Editor settings are NOT here. They live in .vscode/settings.json, which reaches a student with a `git pull` rather than a container rebuild --- see the note at the top of that file.
+      // Only the extension list stays, since that genuinely is a property of the container.
+      "extensions": [
+        "quarto.quarto"
+      ]
+    }
+  }
+}

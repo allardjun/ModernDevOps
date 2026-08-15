@@ -1,0 +1,18 @@
+# Copied to .gitignore in the published repository by scripts/publish.sh.
+#
+# Named without the leading dot on purpose: a real .gitignore in publish/ would apply to this directory of the source repository rather than to the published one.
+#
+# Almost nothing is ignored there --- the whole point of that repository is that the built site is committed --- so this covers only what a reader creates locally after cloning.
+#
+# Note what is NOT here: a student's own working files. This course asks them to commit their work, and a .gitignore that quietly swallowed it would be teaching the opposite of Unit 1.
+
+# Jupyter leftovers from opening the activity notebooks.
+.ipynb_checkpoints/
+
+# Whatever environment a student builds for themselves in Unit 4. None of these are created by anything shipped here; they are here because a student who follows the unit will make one.
+.venv/
+venv/
+__pycache__/
+renv/
+
+.DS_Store
