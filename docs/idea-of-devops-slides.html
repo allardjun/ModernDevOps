@@ -1047,6 +1047,18 @@ display: block;
 margin-left: auto;
 margin-right: 0; }
 </style>
+  <!-- Asks search engines not to index this site. Pulled into the html and revealjs output of every document here through `include-in-header` in each source directory's `_metadata.yml`.
+
+  At the root of the repository rather than in one of the source directories because it applies to all four of them, and a copy per directory is four things to keep in step. Each `_metadata.yml` reaches it as `../_noindex.html`.
+
+  `noindex` is the directive that actually works. `robots.txt` does not: it is only honoured at the root of a host, and this site is a project page at allardjun.github.io/ModernDevOps/, so a robots.txt shipped in the site would be served at /ModernDevOps/robots.txt where no crawler reads it. The host's real robots.txt would have to come from a repository named allardjun.github.io, which does not exist. See SITE_AUDIT.md, part 3.
+
+  Do not add a `Disallow` for these pages later without removing this. A crawler that is disallowed from fetching a page never sees the `noindex` inside it, so blocking makes this unenforceable --- the two measures cancel rather than compound. If a robots.txt ever becomes available, the sound split is `noindex` on the html and `Disallow` on the .pdf, .ipynb, .md and .tex, which have no head for a meta tag.
+
+  `nofollow` is here so that the links out of the landing page --- into the activity repositories, which are public --- do not pass this site's existence along as a signal. `noarchive` asks that no cached copy be shown, which matters for a site whose content is still mostly drafts.
+
+  This is a request, not a control. It is honoured by Google, Bing and DuckDuckGo, and ignored by anything that chooses to. Nothing served over the public internet is private; the repository's visibility is the only real boundary. -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
   <!-- Restores pinch-zoom on the decks. Loaded by every deck in slides/ through `include-in-header` under `revealjs:`.
 
   Quarto's reveal template hardcodes this, at pandoc/template.html line 23:
