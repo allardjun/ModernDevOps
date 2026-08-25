@@ -2232,9 +2232,9 @@ This is a request, not a control. It is honoured by Google, Bing and DuckDuckGo,
   <li><a href="#working-with-your-past-and-future-self" id="toc-working-with-your-past-and-future-self" class="nav-link" data-scroll-target="#working-with-your-past-and-future-self">Working with your past and future self</a>
   <ul class="collapse">
   <li><a href="#version-control-with-git" id="toc-version-control-with-git" class="nav-link" data-scroll-target="#version-control-with-git">Version control with git</a></li>
-  <li><a href="#how-often-should-you-commit" id="toc-how-often-should-you-commit" class="nav-link" data-scroll-target="#how-often-should-you-commit">How often should you commit?</a></li>
   <li><a href="#git-is-already-there" id="toc-git-is-already-there" class="nav-link" data-scroll-target="#git-is-already-there">git is already there</a></li>
   <li><a href="#directory-architecture-and-large-data" id="toc-directory-architecture-and-large-data" class="nav-link" data-scroll-target="#directory-architecture-and-large-data">Directory architecture and large data</a></li>
+  <li><a href="#how-often-should-you-commit" id="toc-how-often-should-you-commit" class="nav-link" data-scroll-target="#how-often-should-you-commit">How often should you commit?</a></li>
   </ul></li>
   <li><a href="#working-with-a-team" id="toc-working-with-a-team" class="nav-link" data-scroll-target="#working-with-a-team">Working with a team</a>
   <ul class="collapse">
@@ -2504,24 +2504,6 @@ This is a request, not a control. It is honoured by Google, Bing and DuckDuckGo,
 </div>
 </div>
 </section>
-<section id="how-often-should-you-commit" class="level2">
-<h2 class="anchored" data-anchor-id="how-often-should-you-commit">How often should you commit?</h2>
-<div class="lede">
-<p>Ask what the action you just took actually was.</p>
-</div>
-<ul>
-<li>Running something to get a result — <code>experiment</code></li>
-<li>Adding a feature, mode or setting — <code>feat</code></li>
-<li>Fixing a bug or troubleshooting — <code>bugfix</code></li>
-<li>Refactoring, cleaning up or improving without adding new capabilities — <code>refactor</code></li>
-</ul>
-<div class="punchline fragment">
-<p>A commit should not include more than one of those. “Make your commits more <em>atomic</em>”.</p>
-</div>
-<div class="fragment">
-<p>Committing is the one opportunity to slow down and think. Avoid automatic commits – this is not the time.</p>
-</div>
-</section>
 <section id="git-is-already-there" class="level2">
 <h2 class="anchored" data-anchor-id="git-is-already-there">git is already there</h2>
 <p>Git is already built in to almost all the software you interact with.</p>
@@ -2549,6 +2531,29 @@ This is a request, not a control. It is honoured by Google, Bing and DuckDuckGo,
 </div>
 <div class="upshot bottom">
 <p>Version control with git can be used smoothly for entire projects — analysis and write-ups, not just code. That is what lets you take a continuous-improvement “DevOps” approach, with the pros and cons above.</p>
+</div>
+</section>
+<section id="how-often-should-you-commit" class="level2">
+<h2 class="anchored" data-anchor-id="how-often-should-you-commit">How often should you commit?</h2>
+<div class="lede">
+<p>Ask what the action you just took actually was.</p>
+</div>
+<ul>
+<li>Running something to get a result — <code>experiment</code></li>
+<li>Adding a feature, mode or setting — <code>feat</code></li>
+<li>Fixing a bug or troubleshooting — <code>bugfix</code></li>
+<li>Refactoring, cleaning up or improving without adding new capabilities — <code>refactor</code></li>
+</ul>
+<div class="punchline">
+<p>A commit should not include more than one of those. “Make your commits more <em>atomic</em>”.</p>
+</div>
+<div class="fragment">
+<p>Committing is the one opportunity to slow down and think. Avoid automatic commits – this is not the time.</p>
+</div>
+<div class="fragment">
+<ul>
+<li>In revisions, one commit per Peer Reviewer comment (e.g., <code>Reviewer1MajorComment3</code>)</li>
+</ul>
 </div>
 </section>
 </section>
