@@ -10,14 +10,12 @@ This repository is the place to *work* in it.
 ## Activities
 
 Click one to open it as a notebook you can type in.
-Every activity is also on the website as html, pdf, tex and markdown.
+Each activity listed here is also on the website as html, pdf, tex and markdown.
 
 - [Activity 1: Make a repo](docs/PS1_working-with-yourself.ipynb)
-- [Activity 2: Let’s write a story!](docs/PS2_working-with-a-team.ipynb)
-- [Activity 3: Who killed Suzy?](docs/PS3_talking-with-the-machine.ipynb)
 - [Activity 4: Two virtual environments](docs/PS4_working-with-the-world.ipynb)
 
-Two of the activities do not live here at all.
+Activities 2 and 3 do not live here at all.
 They have repositories of their own, because working in someone else's repository is the thing they are teaching — the website links to those directly.
 
 ## Somewhere to work
@@ -48,7 +46,7 @@ On Windows, use [Git for Windows](https://gitforwindows.org/) or WSL — not Pow
 
 ### By downloading a single activity
 
-Every activity page on the website has an **ipynb** link.
+The website pages for Activities 1 and 4 have an **ipynb** link.
 Download it and open it in whatever you already use.
 
 ## The course is language-agnostic
