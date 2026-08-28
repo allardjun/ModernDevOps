@@ -12,10 +12,10 @@ This repository is the place to *work* in it.
 Click one to open it as a notebook you can type in.
 Every activity is also on the website as html, pdf, tex and markdown.
 
-- [Activity 1: Working with your past and future self](docs/PS1_working-with-yourself.ipynb)
+- [Activity 1: Make a repo](docs/PS1_working-with-yourself.ipynb)
 - [Activity 2: Let’s write a story!](docs/PS2_working-with-a-team.ipynb)
 - [Activity 3: Who killed Suzy?](docs/PS3_talking-with-the-machine.ipynb)
-- [Activity 4: Working with the world](docs/PS4_working-with-the-world.ipynb)
+- [Activity 4: Two virtual environments](docs/PS4_working-with-the-world.ipynb)
 
 Two of the activities do not live here at all.
 They have repositories of their own, because working in someone else's repository is the thing they are teaching — the website links to those directly.

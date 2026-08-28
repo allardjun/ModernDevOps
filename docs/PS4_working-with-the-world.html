@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jun Allard">
 
-<title>Activity 4: Working with the world</title>
+<title>Activity 4: Two virtual environments</title>
 <style>
 
 code{white-space: pre-wrap;}
@@ -20,6 +20,41 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -2181,13 +2216,21 @@ This is a request, not a control. It is honoured by Google, Bing and DuckDuckGo,
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="PS4_working-with-the-world.md"><i class="bi bi-file-code"></i>Github (GFM)</a></li><li><a href="PS4_working-with-the-world.ipynb" download="PS4_working-with-the-world.ipynb"><i class="bi bi-journal-code"></i>Jupyter</a></li><li><a href="PS4_working-with-the-world.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="PS4_working-with-the-world.tex"><i class="bi bi-file"></i>LaTeX</a></li></ul></div></div>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#a.-two-answers-from-one-script" id="toc-a.-two-answers-from-one-script" class="nav-link active" data-scroll-target="#a.-two-answers-from-one-script">A. Two answers from one script</a></li>
+  <li><a href="#b.-which-number-is-wrong-and-why" id="toc-b.-which-number-is-wrong-and-why" class="nav-link" data-scroll-target="#b.-which-number-is-wrong-and-why">B. Which number is wrong, and why</a></li>
+  <li><a href="#c.-say-which-version-you-meant" id="toc-c.-say-which-version-you-meant" class="nav-link" data-scroll-target="#c.-say-which-version-you-meant">C. Say which version you meant</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="PS4_working-with-the-world.md"><i class="bi bi-file-code"></i>Github (GFM)</a></li><li><a href="PS4_working-with-the-world.ipynb" download="PS4_working-with-the-world.ipynb"><i class="bi bi-journal-code"></i>Jupyter</a></li><li><a href="PS4_working-with-the-world.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="PS4_working-with-the-world.tex"><i class="bi bi-file"></i>LaTeX</a></li></ul></div></nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Activity 4: Working with the world</h1>
+<h1 class="title">Activity 4: Two virtual environments</h1>
 <p class="subtitle lead">Modern DevOps for Systems Biologists</p>
 </div>
 
@@ -2211,7 +2254,60 @@ This is a request, not a control. It is honoured by Google, Bing and DuckDuckGo,
 </header>
 
 
-
+<p>Last year you measured the brightest pixel in a microscope image, added the background offset your protocol calls for, and wrote the number in your paper. Today you run the same script on the same image, and get a different number.</p>
+<section id="a.-two-answers-from-one-script" class="level2">
+<h2 class="anchored" data-anchor-id="a.-two-answers-from-one-script">A. Two answers from one script</h2>
+<ol type="i">
+<li><p>Check that you have <code>uv</code>, the tool that builds and runs Python environments:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If that fails, install it and open a new terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LsSf</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Write this into a file called <code>brightest.py</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># An 8-bit microscope image. Every pixel is a whole number from 0 to 255.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>image <span class="op">=</span> np.array([[<span class="dv">12</span>, <span class="dv">250</span>], [<span class="dv">180</span>, <span class="dv">7</span>]], dtype<span class="op">=</span>np.uint8)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>peak <span class="op">=</span> image.<span class="bu">max</span>()      <span class="co"># the brightest pixel</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>corrected <span class="op">=</span> peak <span class="op">+</span> <span class="dv">100</span>  <span class="co"># the protocol says to add a background offset of 100</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;numpy&quot;</span>, np.__version__)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;brightest pixel:&quot;</span>, peak)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;after offset:   &quot;</span>, corrected)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Run it twice, against two different versions of numpy. <code>uv run --with</code> builds a throwaway environment containing exactly the version you name, runs your script inside it, and throws it away again:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run <span class="at">--with</span> <span class="st">&#39;numpy==1.26.4&#39;</span> brightest.py</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run <span class="at">--with</span> <span class="st">&#39;numpy==2.3.2&#39;</span>  brightest.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Write down both answers.</p>
+<p>(If <code>uv</code> pauses to download a Python as well as a numpy, that is expected: the interpreter is part of the environment too, and <code>uv</code> picks one each version of numpy can actually run on.)</p></li>
+</ol>
+</section>
+<section id="b.-which-number-is-wrong-and-why" class="level2">
+<h2 class="anchored" data-anchor-id="b.-which-number-is-wrong-and-why">B. Which number is wrong, and why</h2>
+<ol type="i">
+<li><p>The brightest pixel is 250 in both runs, so the image is not the problem. 250 + 100 = 350, and 350 does not fit in the 0-255 range that <code>uint8</code> can hold. One version widens the number to make it fit; the other lets it wrap around past 255 and start again from 0. Say which version did which, and check that the wrapped answer is the one you would predict.</p></li>
+<li><p>Only one of the two runs said anything about this at all. Look again at the output of each — including anything printed before the numbers — and say what warning you got, from which version, and whether you would have noticed it in a script that printed a hundred lines.</p></li>
+<li><p>This change is documented in <a href="https://numpy.org/neps/nep-0050-scalar-promotion.html">NEP 50</a>, which shipped in numpy 2.0.</p></li>
+</ol>
+</section>
+<section id="c.-say-which-version-you-meant" class="level2">
+<h2 class="anchored" data-anchor-id="c.-say-which-version-you-meant">C. Say which version you meant</h2>
+<p>Make the version a property of the project.</p>
+<ol type="i">
+<li><p>Create a project and pin the version you decided to believe:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init brightness</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> brightness</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="st">&#39;numpy==1.26.4&#39;</span>      <span class="co"># or 2.3.2 --- your choice, but say which</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Move <code>brightest.py</code> into that directory and run it with no <code>--with</code> at all:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run brightest.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Confirm you get the answer you chose.</p></li>
+<li><p>Two files now record the environment.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> pyproject.toml</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> uv.lock</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>pyproject.toml</code> is what you asked for; <code>uv.lock</code> is what you got, down to the exact build of every package numpy itself depends on. The second is the one that makes someone else’s run identical to yours. <code>uv init</code> wrote a third, <code>.python-version</code>, for the same reason.</p></li>
+<li><p>Commit both, together with the script. A collaborator who clones this and types <code>uv run brightest.py</code> now gets your number, on their machine, without asking you anything.</p></li>
+<li><p>Finally, write a <code>QUICKSTART.md</code> in that directory: four lines that take a stranger from a fresh clone to the number your script prints. Assume they have nothing installed but <code>git</code>.</p></li>
+</ol>
+</section>
 
 </main>
 <!-- /main column -->

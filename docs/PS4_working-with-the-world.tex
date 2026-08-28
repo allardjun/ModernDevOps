@@ -65,6 +65,46 @@
 \fi
 \makeatother
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \usepackage{longtable,booktabs,array}
 \newcounter{none} % for unnumbered tables
@@ -199,7 +239,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Activity 4: Working with the world},
+  pdftitle={Activity 4: Two virtual environments},
   pdfauthor={Jun Allard},
   colorlinks=true,
   linkcolor={blue},
@@ -209,18 +249,18 @@
   pdfcreator={LaTeX via pandoc}}
 
 \ifXeTeX
-\special{pdf:trailerid [ <54285468617840d8302fc115d331eda8> <54285468617840d8302fc115d331eda8> ]}
+\special{pdf:trailerid [ <f61c361cf8716d6f1e8bec6559f0dc05> <f61c361cf8716d6f1e8bec6559f0dc05> ]}
 \fi
 \ifPDFTeX
 \pdftrailerid{}
-\pdftrailer{/ID [ <54285468617840d8302fc115d331eda8> <54285468617840d8302fc115d331eda8> ]}
+\pdftrailer{/ID [ <f61c361cf8716d6f1e8bec6559f0dc05> <f61c361cf8716d6f1e8bec6559f0dc05> ]}
 \fi
 \ifLuaTeX
-\pdfvariable trailerid {[ <54285468617840d8302fc115d331eda8> <54285468617840d8302fc115d331eda8> ]}
+\pdfvariable trailerid {[ <f61c361cf8716d6f1e8bec6559f0dc05> <f61c361cf8716d6f1e8bec6559f0dc05> ]}
 \fi
 
 
-\title{Activity 4: Working with the world}
+\title{Activity 4: Two virtual environments}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
@@ -234,7 +274,147 @@
 \maketitle
 
 
+Last year you measured the brightest pixel in a microscope image, added
+the background offset your protocol calls for, and wrote the number in
+your paper. Today you run the same script on the same image, and get a
+different number.
 
+\subsection{A. Two answers from one
+script}\label{a.-two-answers-from-one-script}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  Check that you have \texttt{uv}, the tool that builds and runs Python
+  environments:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{uv} \AttributeTok{{-}{-}version}
+\end{Highlighting}
+\end{Shaded}
+
+  If that fails, install it and open a new terminal:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{curl} \AttributeTok{{-}LsSf}\NormalTok{ https://astral.sh/uv/install.sh }\KeywordTok{|} \FunctionTok{sh}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Write this into a file called \texttt{brightest.py}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+
+\CommentTok{\# An 8{-}bit microscope image. Every pixel is a whole number from 0 to 255.}
+\NormalTok{image }\OperatorTok{=}\NormalTok{ np.array([[}\DecValTok{12}\NormalTok{, }\DecValTok{250}\NormalTok{], [}\DecValTok{180}\NormalTok{, }\DecValTok{7}\NormalTok{]], dtype}\OperatorTok{=}\NormalTok{np.uint8)}
+
+\NormalTok{peak }\OperatorTok{=}\NormalTok{ image.}\BuiltInTok{max}\NormalTok{()      }\CommentTok{\# the brightest pixel}
+\NormalTok{corrected }\OperatorTok{=}\NormalTok{ peak }\OperatorTok{+} \DecValTok{100}  \CommentTok{\# the protocol says to add a background offset of 100}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{"numpy"}\NormalTok{, np.\_\_version\_\_)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"brightest pixel:"}\NormalTok{, peak)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"after offset:   "}\NormalTok{, corrected)}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Run it twice, against two different versions of numpy.
+  \texttt{uv\ run\ -\/-with} builds a throwaway environment containing
+  exactly the version you name, runs your script inside it, and throws
+  it away again:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{uv}\NormalTok{ run }\AttributeTok{{-}{-}with} \StringTok{\textquotesingle{}numpy==1.26.4\textquotesingle{}}\NormalTok{ brightest.py}
+\ExtensionTok{uv}\NormalTok{ run }\AttributeTok{{-}{-}with} \StringTok{\textquotesingle{}numpy==2.3.2\textquotesingle{}}\NormalTok{  brightest.py}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Write down both answers.
+
+  (If \texttt{uv} pauses to download a Python as well as a numpy, that
+  is expected: the interpreter is part of the environment too, and
+  \texttt{uv} picks one each version of numpy can actually run on.)
+\end{enumerate}
+
+\subsection{B. Which number is wrong, and
+why}\label{b.-which-number-is-wrong-and-why}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  The brightest pixel is 250 in both runs, so the image is not the
+  problem. 250 + 100 = 350, and 350 does not fit in the 0-255 range that
+  \texttt{uint8} can hold. One version widens the number to make it fit;
+  the other lets it wrap around past 255 and start again from 0. Say
+  which version did which, and check that the wrapped answer is the one
+  you would predict.
+\item
+  Only one of the two runs said anything about this at all. Look again
+  at the output of each --- including anything printed before the
+  numbers --- and say what warning you got, from which version, and
+  whether you would have noticed it in a script that printed a hundred
+  lines.
+\item
+  This change is documented in
+  \href{https://numpy.org/neps/nep-0050-scalar-promotion.html}{NEP 50},
+  which shipped in numpy 2.0.
+\end{enumerate}
+
+\subsection{C. Say which version you
+meant}\label{c.-say-which-version-you-meant}
+
+Make the version a property of the project.
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  Create a project and pin the version you decided to believe:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{uv}\NormalTok{ init brightness}
+\BuiltInTok{cd}\NormalTok{ brightness}
+\ExtensionTok{uv}\NormalTok{ add }\StringTok{\textquotesingle{}numpy==1.26.4\textquotesingle{}}      \CommentTok{\# or 2.3.2 {-}{-}{-} your choice, but say which}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Move \texttt{brightest.py} into that directory and run it with no
+  \texttt{-\/-with} at all:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{uv}\NormalTok{ run brightest.py}
+\end{Highlighting}
+\end{Shaded}
+
+  Confirm you get the answer you chose.
+\item
+  Two files now record the environment.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{ pyproject.toml}
+\FunctionTok{cat}\NormalTok{ uv.lock}
+\end{Highlighting}
+\end{Shaded}
+
+  \texttt{pyproject.toml} is what you asked for; \texttt{uv.lock} is
+  what you got, down to the exact build of every package numpy itself
+  depends on. The second is the one that makes someone else's run
+  identical to yours. \texttt{uv\ init} wrote a third,
+  \texttt{.python-version}, for the same reason.
+\item
+  Commit both, together with the script. A collaborator who clones this
+  and types \texttt{uv\ run\ brightest.py} now gets your number, on
+  their machine, without asking you anything.
+\item
+  Finally, write a \texttt{QUICKSTART.md} in that directory: four lines
+  that take a stranger from a fresh clone to the number your script
+  prints. Assume they have nothing installed but \texttt{git}.
+\end{enumerate}
 
 
 

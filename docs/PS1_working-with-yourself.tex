@@ -65,6 +65,46 @@
 \fi
 \makeatother
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \usepackage{longtable,booktabs,array}
 \newcounter{none} % for unnumbered tables
@@ -199,7 +239,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Activity 1: Working with your past and future self},
+  pdftitle={Activity 1: Make a repo},
   pdfauthor={Jun Allard},
   colorlinks=true,
   linkcolor={blue},
@@ -209,18 +249,18 @@
   pdfcreator={LaTeX via pandoc}}
 
 \ifXeTeX
-\special{pdf:trailerid [ <54285468617840d8302fc115d331eda8> <54285468617840d8302fc115d331eda8> ]}
+\special{pdf:trailerid [ <3925478085f8c6ada32ca4b0f531e388> <3925478085f8c6ada32ca4b0f531e388> ]}
 \fi
 \ifPDFTeX
 \pdftrailerid{}
-\pdftrailer{/ID [ <54285468617840d8302fc115d331eda8> <54285468617840d8302fc115d331eda8> ]}
+\pdftrailer{/ID [ <3925478085f8c6ada32ca4b0f531e388> <3925478085f8c6ada32ca4b0f531e388> ]}
 \fi
 \ifLuaTeX
-\pdfvariable trailerid {[ <54285468617840d8302fc115d331eda8> <54285468617840d8302fc115d331eda8> ]}
+\pdfvariable trailerid {[ <3925478085f8c6ada32ca4b0f531e388> <3925478085f8c6ada32ca4b0f531e388> ]}
 \fi
 
 
-\title{Activity 1: Working with your past and future self}
+\title{Activity 1: Make a repo}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
@@ -234,7 +274,113 @@
 \maketitle
 
 
+\subsection{A. Make a repository}\label{a.-make-a-repository}
 
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  Go to \href{https://github.com/new}{github.com/new}. Give it a name
+  like \texttt{my-first-repo}. Keep it \textbf{Private}.
+\item
+  Tick \textbf{Add a README file}.
+\item
+  In the \textbf{Add .gitignore} dropdown, choose the template for
+  whatever language you actually work in --- Python, R, Julia, MATLAB.
+  Then click \textbf{Create repository}.
+\item
+  (Optional) Open the \texttt{.gitignore} it made for you and inspect
+  it.
+\item
+  Click \texttt{README.md}, click the pencil icon, delete what is there,
+  and paste this in its place:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\# Rotation project}
+
+\FunctionTok{\#\# Results so far}
+
+\NormalTok{Nothing yet.}
+
+\FunctionTok{\#\# Conditions}
+
+\PreprocessorTok{|}\NormalTok{ Condition }\PreprocessorTok{|}\NormalTok{ Temperature }\PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ control }\PreprocessorTok{|}\NormalTok{ 25 C }\PreprocessorTok{|}
+\PreprocessorTok{|}\NormalTok{ heat shock }\PreprocessorTok{|}\NormalTok{ 42 C }\PreprocessorTok{|}
+
+\FunctionTok{\#\# Overview}
+
+\NormalTok{Measuring how fast the reporter turns over under heat stress.}
+\end{Highlighting}
+\end{Shaded}
+
+  Commit it.
+\end{enumerate}
+
+\subsection{B. Editing and committing}\label{b.-editing-and-committing}
+
+Perform each of the following edits, with each one being a separate
+commit, with a semantic commit message. Use the \textbf{Preview} tab in
+the editor as you go, so you can see what your Markdown actually renders
+as.
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  Add a column to the table that records a rate \(k\).
+\item
+  But the conditions table in \texttt{README.md} does not render
+  properly. It comes out as one long line with pipes in it, instead of a
+  table. Fix it.
+
+  \emph{A Markdown table needs a row of dashes under its header,
+  separating the header from the body. Without it, the whole thing is
+  just a paragraph that happens to contain \texttt{\textbar{}}
+  characters.}
+\item
+  Add a \textbf{Data} section to \texttt{README.md}, saying where the
+  large files for this project live --- a Dropbox folder, a Google
+  Drive, a server --- and why they are not in this repository.
+\item
+  Put the sections in a more standard order: Put \textbf{Overview} at
+  the top.
+\end{enumerate}
+
+\subsection{C. Read your own history}\label{c.-read-your-own-history}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  Go to your repository's front page and click on the commit count ---
+  the little clock icon with a number next to it.
+\item
+  Six months from now you want the commit where you recorded \(k\). Can
+  you find it from the messages alone, \textbf{without opening a single
+  commit}?
+\end{enumerate}
+
+\subsection{D. Optional: the hash that cannot cite
+itself}\label{d.-optional-the-hash-that-cannot-cite-itself}
+
+Every commit has a hash --- the string like \texttt{e4f19a2} beside it
+in the list. It is a fingerprint of everything in the project at that
+moment. It is how the three places in the lecture --- data, code,
+manuscript --- each record which version of the others they go with.
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  Copy the hash of your most recent commit. Add a line to
+  \texttt{README.md} reading \textbf{This version: \texttt{e4f19a2}},
+  with your own hash, and commit it.
+
+  Your README now cites the version before it. A figure caption in a
+  manuscript does exactly this, which is what lets you regenerate that
+  figure years later.
+\item
+  Are you able to make the \texttt{README.md} state the current commit
+  hash? \emph{Hint: do not try for too long.}
+\end{enumerate}
 
 
 
